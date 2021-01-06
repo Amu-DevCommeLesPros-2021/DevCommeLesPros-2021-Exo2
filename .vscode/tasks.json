@@ -6,7 +6,7 @@
         {
             "label": "make test",
             "type": "shell",
-            "command": "make test",
+            "command": "make build/test",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -14,8 +14,8 @@
             "problemMatcher": "$gcc",
             "presentation": {
                 "reveal": "always",
-                "panel": "new"
-              }
+                "panel": "shared"
+            }
         },
         {
             "label": "make clean",
@@ -23,7 +23,7 @@
             "command": "make clean",
             "presentation": {
                 "reveal": "always",
-                "panel": "new"
+                "panel": "shared"
             },
             "problemMatcher": []
         }
