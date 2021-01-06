@@ -166,7 +166,7 @@ int main()
     chiffre_Vigenere_flux_texte(fichier_resultat, fichier_clair, "agatha");
     fclose(fichier_clair);
     fclose(fichier_resultat);
-    TEST_FILE("build/test/resultat.txt", "test/chiffre.txt");
+    TEST_FILE("build/resultat.txt", "test/chiffre.txt");
 
     // Tets dechiffre_Vigenere_flux_texte.
     fichier_resultat = fopen("build/resultat.txt", "w");
@@ -174,7 +174,7 @@ int main()
     dechiffre_Vigenere_flux_texte(fichier_resultat, fichier_chiffre, "agatha");
     fclose(fichier_chiffre);
     fclose(fichier_resultat);
-    TEST_FILE("build/test/resultat.txt", "test/clair.txt");
+    TEST_FILE("build/resultat.txt", "test/clair.txt");
 
     return tests_total - tests_successful;
 }
