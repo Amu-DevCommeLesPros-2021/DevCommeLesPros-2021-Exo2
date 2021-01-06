@@ -2,6 +2,18 @@
 
 Modèle de départ pour exercices d'introduction au makefile, à une structure de projet et aux bibliothèques logicielles.
 
+<!-- TOC depthfrom:2 -->
+
+- [Instructions de départ](#instructions-de-d%C3%A9part)
+- [Objectif](#objectif)
+- [Instructions de travail](#instructions-de-travail)
+- [Questions-Réponses](#questions-r%C3%A9ponses)
+    - [«Puis-je utiliser l'en-tête <X.h> dans mon code ?»](#%C2%ABpuis-je-utiliser-len-t%C3%AAte-xh-dans-mon-code-%C2%BB)
+    - [«J'ai un problème !»](#%C2%ABjai-un-probl%C3%A8me-%C2%BB)
+- [Évaluation](#%C3%A9valuation)
+
+<!-- /TOC -->
+
 ## Instructions de départ
 
 Ces intructions présupposent que vous avez déjà suivi les instructions du [zérotième exercice](https://github.com/thierryseegers/DevCommeLesPros-2021-Exo0#instructions-de-d%C3%A9part) pour la création d'un compte GitHub et l'installation des programmes et extensions nécéssaires.
@@ -94,6 +106,12 @@ Avec la commande `$ git log --all --decorate --oneline --graph`, l'historique de
 ```
 
 ## Questions-Réponses
+
+### «Puis-je utiliser l'en-tête <X.h> dans mon code ?»
+
+Oui.
+Vous avez droit à toutes les en-têtes C standard pour cet exercice et tous les exercices suivants.
+Explorez particulièrement `<ctype.h>` et `<string.h>`.
 
 ### «J'ai un problème !»
 
