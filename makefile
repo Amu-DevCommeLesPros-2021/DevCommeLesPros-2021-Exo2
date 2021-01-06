@@ -15,12 +15,12 @@ build:
 
 # Bibliothèque de chiffrage. Quatre cibles, trois pour compiler les codes de chiffrage en fichiers objets (ROT13.o, etc.) et 
 # une pour les lier en bibliothèque statique (libchiffrage.a).
-build/ROT13.o: lib/ROT13.c | build
+build/ROT13.o: lib/ROT13.c lib/ROT13.h | build
 	gcc -Wall -Werror -pedantic --debug -c lib/ROT13.c -I ./lib -o build/ROT13.o
 
 # ... ?
 
-build/libchiffrage.a: build/ROT13.o | build
+build/libchiffrage.a: lib/chiffrage.h build/ROT13.o | build
 	ar crs build/libchiffrage.a build/ROT13.o
 
 
