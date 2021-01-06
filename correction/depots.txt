@@ -1,0 +1,3 @@
+# List of repository names of the form [username/reponame].
+# The correction program will clone ssh://git@github.com/[username/reponame].git to ./[username-reponame]
+# Example: donaldduck/DevCommeLesPros-2020-Ex2

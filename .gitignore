@@ -1,0 +1,4 @@
+.vscode/settings.json
+build/
+correction/*
+!correction/correction.py
