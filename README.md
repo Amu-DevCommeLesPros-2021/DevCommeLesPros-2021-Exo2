@@ -1,6 +1,6 @@
-# DevCommeLesPros-2021-Ex02
+# DevCommeLesPros-2021-Exo2
 
-Modèle de départ pour exercices d'introduction au makefile, à une structure de projet et aux bibliothèques logicielles.
+Modèle de départ pour exercices d'introduction au `makefile`, à une structure de projet et aux bibliothèques logicielles.
 
 <!-- TOC depthfrom:2 -->
 
@@ -33,7 +33,8 @@ Ces intructions présupposent que vous avez déjà suivi les instructions du [z�
         - `$ code .`
 1. Compilez une première fois le programme.
     - Menu: `View` > `Command Palette` > `Tasks: Run Build Task`
-1. Vous devriez observer dans l'onglet `TERMINAL` le résultat suivant :
+1. Vous devriez observer dans l'onglet `TERMINAL` le résultat suivant.
+C'est normal car le fichier `makefile` manque des cibles pour produire le bon programme.
     - Sous Linux : 
         - `collect2: error: ld returned 1 exit status`
     - Sous MacOS : 
