@@ -9,9 +9,11 @@
 int const tests_total = 68;
 int const test_column_width = 80;
 
+#define TAILLE_CHAINE 128
+
 int main()
 {
-    char clair[128];
+    char clair[TAILLE_CHAINE], chiffre[TAILLE_CHAINE];
 
     // Tests chiffre_ROT13
     strcpy(clair, "a");
@@ -26,16 +28,16 @@ int main()
     TEST(strcmp(chiffre_ROT13(clair), "Wr ynvffr zrf ovraf à zn fbrhe ? Aba ! À zba arirh. Wnznvf fren cnlé yr pbzcgr qh gnvyyrhe. Evra nhk cnhierf.") == 0);
 
     // Tests dechiffre_ROT13.
-    strcpy(clair, "n");
-    TEST(strcmp(dechiffre_ROT13(clair), "a") == 0);
-    strcpy(clair, "nopqrstuvwxyzabcdefghijklm");
-    TEST(strcmp(dechiffre_ROT13(clair), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "nOpqRStuvWXYzabcDEFGhIjKlM");
-    TEST(strcmp(dechiffre_ROT13(clair), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "N, n.");
-    TEST(strcmp(dechiffre_ROT13(clair), "A, a.") == 0);
-    strcpy(clair, "Wr ynvffr zrf ovraf à zn fbrhe ? Aba ! À zba arirh. Wnznvf fren cnlé yr pbzcgr qh gnvyyrhe. Evra nhk cnhierf.");
-    TEST(strcmp(dechiffre_ROT13(clair), "Je laisse mes biens à ma soeur ? Non ! À mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "n");
+    TEST(strcmp(dechiffre_ROT13(chiffre), "a") == 0);
+    strcpy(chiffre, "nopqrstuvwxyzabcdefghijklm");
+    TEST(strcmp(dechiffre_ROT13(chiffre), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "nOpqRStuvWXYzabcDEFGhIjKlM");
+    TEST(strcmp(dechiffre_ROT13(chiffre), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "N, n.");
+    TEST(strcmp(dechiffre_ROT13(chiffre), "A, a.") == 0);
+    strcpy(chiffre, "Wr ynvffr zrf ovraf à zn fbrhe ? Aba ! À zba arirh. Wnznvf fren cnlé yr pbzcgr qh gnvyyrhe. Evra nhk cnhierf.");
+    TEST(strcmp(dechiffre_ROT13(chiffre), "Je laisse mes biens à ma soeur ? Non ! À mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
 
 
     // Test chiffre_Cesar.
@@ -71,36 +73,36 @@ int main()
     TEST(strcmp(chiffre_Cesar(clair, 'z'), "Id kzhrrd ldr ahdmr à lz rndtq. Mnm à lnm mdudt. Izlzhr rdqz ozxé kd bnlosd ct szhkkdtq. Qhdm ztw oztuqdr.") == 0);
 
     // Tests dechiffre_Cesar.
-    strcpy(clair, "a");
-    TEST(strcmp(dechiffre_Cesar(clair, 'a'), "a") == 0);
-    strcpy(clair, "c");
-    TEST(strcmp(dechiffre_Cesar(clair, 'c'), "a") == 0);
-    strcpy(clair, "z");
-    TEST(strcmp(dechiffre_Cesar(clair, 'z'), "a") == 0);
-    strcpy(clair, "abcdefghijklmnopqrstuvwxyz");
-    TEST(strcmp(dechiffre_Cesar(clair, 'a'), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "cdefghijklmnopqrstuvwxyzab");
-    TEST(strcmp(dechiffre_Cesar(clair, 'c'), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "zabcdefghijklmnopqrstuvwxy");
-    TEST(strcmp(dechiffre_Cesar(clair, 'z'), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "aBcdEFghiJKLmnopQRSTuVwXyZ");
-    TEST(strcmp(dechiffre_Cesar(clair, 'a'), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "cDefGHijkLMNopqrSTUVwXyZaB");
-    TEST(strcmp(dechiffre_Cesar(clair, 'c'), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "zAbcDEfghIJKlmnoPQRStUvWxY");
-    TEST(strcmp(dechiffre_Cesar(clair, 'z'), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "A, a.");
-    TEST(strcmp(dechiffre_Cesar(clair, 'a'), "A, a.") == 0);
-    strcpy(clair, "C, c.");
-    TEST(strcmp(dechiffre_Cesar(clair, 'c'), "A, a.") == 0);
-    strcpy(clair, "Z, z.");
-    TEST(strcmp(dechiffre_Cesar(clair, 'z'), "A, a.") == 0);
-    strcpy(clair, "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.");
-    TEST(strcmp(dechiffre_Cesar(clair, 'a'), "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
-    strcpy(clair, "Lg nckuug ogu dkgpu à oc uqgwt. Pqp à oqp pgxgw. Lcocku ugtc rcaé ng eqorvg fw vcknngwt. Tkgp cwz rcwxtgu.");
-    TEST(strcmp(dechiffre_Cesar(clair, 'c'), "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
-    strcpy(clair, "Id kzhrrd ldr ahdmr à lz rndtq. Mnm à lnm mdudt. Izlzhr rdqz ozxé kd bnlosd ct szhkkdtq. Qhdm ztw oztuqdr.");
-    TEST(strcmp(dechiffre_Cesar(clair, 'z'), "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "a");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'a'), "a") == 0);
+    strcpy(chiffre, "c");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'c'), "a") == 0);
+    strcpy(chiffre, "z");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'z'), "a") == 0);
+    strcpy(chiffre, "abcdefghijklmnopqrstuvwxyz");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'a'), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "cdefghijklmnopqrstuvwxyzab");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'c'), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "zabcdefghijklmnopqrstuvwxy");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'z'), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "aBcdEFghiJKLmnopQRSTuVwXyZ");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'a'), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "cDefGHijkLMNopqrSTUVwXyZaB");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'c'), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "zAbcDEfghIJKlmnoPQRStUvWxY");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'z'), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "A, a.");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'a'), "A, a.") == 0);
+    strcpy(chiffre, "C, c.");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'c'), "A, a.") == 0);
+    strcpy(chiffre, "Z, z.");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'z'), "A, a.") == 0);
+    strcpy(chiffre, "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'a'), "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "Lg nckuug ogu dkgpu à oc uqgwt. Pqp à oqp pgxgw. Lcocku ugtc rcaé ng eqorvg fw vcknngwt. Tkgp cwz rcwxtgu.");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'c'), "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "Id kzhrrd ldr ahdmr à lz rndtq. Mnm à lnm mdudt. Izlzhr rdqz ozxé kd bnlosd ct szhkkdtq. Qhdm ztw oztuqdr.");
+    TEST(strcmp(dechiffre_Cesar(chiffre, 'z'), "Je laisse mes biens à ma soeur. Non à mon neveu. Jamais sera payé le compte du tailleur. Rien aux pauvres.") == 0);
 
 
     // Tests chiffre_Vigenere.
@@ -132,32 +134,32 @@ int main()
     TEST(strcmp(chiffre_Vigenere(clair, "zzz"), "Id kzhrrd ldr ahdmr à lz rndtq ? Mnm ! À lnm mdudt ? Izlzhr ! Rdqz ozxé kd bnlosd ct szhkkdtq. Qhdm ztw oztuqdr.") == 0);
 
     // Tests dechiffre_Vigenere.
-    strcpy(clair, "a");
-    TEST(strcmp(dechiffre_Vigenere(clair, "a"), "a") == 0);
-    strcpy(clair, "abcdefghijklmnopqrstuvwxyz");
-    TEST(strcmp(dechiffre_Vigenere(clair, "a"), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "acedfhgikjlnmoqprtsuwvxzya");
-    TEST(strcmp(dechiffre_Vigenere(clair,"abc"), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "zabcdefghijklmnopqrstuvwxy");
-    TEST(strcmp(dechiffre_Vigenere(clair,"zzz"), "abcdefghijklmnopqrstuvwxyz") == 0);
-    strcpy(clair, "aBcdEFghiJKLmnopQRSTuVwXyZ");
-    TEST(strcmp(dechiffre_Vigenere(clair, "a"), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "aCedFHgikJLNmoqpRTSUwVxZyA");
-    TEST(strcmp(dechiffre_Vigenere(clair, "abc"), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "zAbcDEfghIJKlmnoPQRStUvWxY");
-    TEST(strcmp(dechiffre_Vigenere(clair, "zzz"), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
-    strcpy(clair, "A, a.");
-    TEST(strcmp(dechiffre_Vigenere(clair, "a"), "A, a.") == 0);
-    strcpy(clair, "A, b.");
-    TEST(strcmp(dechiffre_Vigenere(clair, "abc"), "A, a.") == 0);
-    strcpy(clair, "Z, z.");
-    TEST(strcmp(dechiffre_Vigenere(clair, "zzz"), "A, a.") == 0);
-    strcpy(clair, "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.");
-    TEST(strcmp(dechiffre_Vigenere(clair, "a"), "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.") == 0);
-    strcpy(clair, "Jf najusf oet difps à nc spgus ? Poo ! À ooo pewgu ? Kcmbks ! Tgrb razé ne dqmqve ew tbklmgus. Tifp avz pbwvsgs.");
-    TEST(strcmp(dechiffre_Vigenere(clair, "abc"), "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.") == 0);
-    strcpy(clair, "Id kzhrrd ldr ahdmr à lz rndtq ? Mnm ! À lnm mdudt ? Izlzhr ! Rdqz ozxé kd bnlosd ct szhkkdtq. Qhdm ztw oztuqdr.");
-    TEST(strcmp(dechiffre_Vigenere(clair, "zzz"), "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "a");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "a"), "a") == 0);
+    strcpy(chiffre, "abcdefghijklmnopqrstuvwxyz");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "a"), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "acedfhgikjlnmoqprtsuwvxzya");
+    TEST(strcmp(dechiffre_Vigenere(chiffre,"abc"), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "zabcdefghijklmnopqrstuvwxy");
+    TEST(strcmp(dechiffre_Vigenere(chiffre,"zzz"), "abcdefghijklmnopqrstuvwxyz") == 0);
+    strcpy(chiffre, "aBcdEFghiJKLmnopQRSTuVwXyZ");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "a"), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "aCedFHgikJLNmoqpRTSUwVxZyA");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "abc"), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "zAbcDEfghIJKlmnoPQRStUvWxY");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "zzz"), "aBcdEFghiJKLmnopQRSTuVwXyZ") == 0);
+    strcpy(chiffre, "A, a.");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "a"), "A, a.") == 0);
+    strcpy(chiffre, "A, b.");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "abc"), "A, a.") == 0);
+    strcpy(chiffre, "Z, z.");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "zzz"), "A, a.") == 0);
+    strcpy(chiffre, "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "a"), "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "Jf najusf oet difps à nc spgus ? Poo ! À ooo pewgu ? Kcmbks ! Tgrb razé ne dqmqve ew tbklmgus. Tifp avz pbwvsgs.");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "abc"), "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.") == 0);
+    strcpy(chiffre, "Id kzhrrd ldr ahdmr à lz rndtq ? Mnm ! À lnm mdudt ? Izlzhr ! Rdqz ozxé kd bnlosd ct szhkkdtq. Qhdm ztw oztuqdr.");
+    TEST(strcmp(dechiffre_Vigenere(chiffre, "zzz"), "Je laisse mes biens à ma soeur ? Non ! À mon neveu ? Jamais ! Sera payé le compte du tailleur. Rien aux pauvres.") == 0);
 
 
     // Tests chiffre_Vigenere_flux_texte.
