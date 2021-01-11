@@ -44,10 +44,10 @@ C'est normal car le fichier `makefile` manque des cibles pour produire le bon pr
 
 Dans ce dépôt se trouve des fichiers de code qui composent une bibliothèque statique `libchiffrage.a`.
 Cette bibliothèque contient des fonctions servant à chiffer et à déchiffrer des chaînes de charatères suivant des méthodes diverses (bien qu'anciennes et peu sécuritaires !).
-Il se trouve aussi un programme de test (`test/main.c`) qui confirme que les fonctions sont bien implémentées.
+Il se trouve aussi un programme de test (`test/main.c`) qui, comme dans l'exercice précédent, confirme que les fonctions sont bien implémentées.
 
 1. Réparez le fichier `makefile` pour faire en sorte que la bibliothèque `libchiffrage.a` contienne tous les fichiers objets nécéssaires (fussent-ils eux-même temporairement incomplets) et que le programme `test` puisse être correctment lié et lancé.
-1. Implémentez correctement toutes les fonctions de chiffrages pour que le programme `build/test` renvoie `0` à l'invite de commande.
+1. Implémentez correctement toutes les fonctions de chiffrages pour que le programme `build/test` affiche que tous les tests passent avec succès et renvoie `0` à l'invite de commande.
 
 Il vous est permis : 
 - De modifier le fichier `makefile`.
