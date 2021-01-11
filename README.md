@@ -7,10 +7,10 @@ Modèle de départ pour exercices d'introduction au `makefile`, à une structure
 - [Préparation](#pr%C3%A9paration)
 - [Objectif](#objectif)
 - [Instructions de travail](#instructions-de-travail)
+- [Évaluation](#%C3%A9valuation)
 - [Questions-Réponses](#questions-r%C3%A9ponses)
     - [«Puis-je utiliser l'en-tête <X.h> dans mon code ?»](#%C2%ABpuis-je-utiliser-len-t%C3%AAte-xh-dans-mon-code-%C2%BB)
     - [«J'ai un problème !»](#%C2%ABjai-un-probl%C3%A8me-%C2%BB)
-- [Évaluation](#%C3%A9valuation)
 
 <!-- /TOC -->
 
@@ -46,16 +46,8 @@ Dans ce dépôt se trouve des fichiers de code qui composent une bibliothèque s
 Cette bibliothèque contient des fonctions servant à chiffer et à déchiffrer des chaînes de charatères suivant des méthodes diverses (bien qu'anciennes et peu sécuritaires !).
 Il se trouve aussi un programme de test (`test/main.c`) qui, comme dans l'exercice précédent, confirme que les fonctions sont bien implémentées.
 
-1. Réparez le fichier `makefile` pour faire en sorte que la bibliothèque `libchiffrage.a` contienne tous les fichiers objets nécéssaires (fussent-ils eux-même temporairement incomplets) et que le programme `test` puisse être correctment lié et lancé.
+1. Réparez le fichier `makefile` pour faire en sorte que la bibliothèque `libchiffrage.a` contienne tous les fichiers objets nécéssaires (fussent-ils eux-même temporairement incomplets) et que le programme `build/test` puisse être correctment lié et lancé.
 1. Implémentez correctement toutes les fonctions de chiffrages pour que le programme `build/test` affiche que tous les tests passent avec succès et renvoie `0` à l'invite de commande.
-
-Il vous est permis : 
-- De modifier le fichier `makefile`.
-- De modifier les fichiers `lib/ROT13.c`, `lib/Cesar.c` et `lib/Vigenere.c` afin d'implémenter les fonctions qu'ils contiennent.
-
-Il ne vous est pas permis :
-- De modifier le fichier `test/main.c`.
-- De modifier les fichiers d'entête `lib/chiffrage.h`, `lib/ROT13.h`, `lib/Cesar.h`, `lib/Vigenere.h` et `lib/chiffrage.h`.
 
 ## Instructions de travail
 
@@ -106,6 +98,24 @@ Avec la commande `$ git log --all --decorate --oneline --graph`, l'historique de
 * 68cb404 Initial commit
 ```
 
+Il vous est permis : 
+- De modifier le fichier `makefile`.
+- De modifier les fichiers `lib/ROT13.c`, `lib/Cesar.c` et `lib/Vigenere.c` afin d'implémenter les fonctions qu'ils contiennent.
+
+Il ne vous est pas permis :
+- De modifier le fichier `test/main.c`.
+- De modifier les fichiers d'en-tête `lib/chiffrage.h`, `lib/ROT13.h`, `lib/Cesar.h`, `lib/Vigenere.h` et `lib/chiffrage.h`.
+
+## Évaluation
+
+L'évaluation portera sur :
+
+1. Le suivi des instructions de travail.
+1. Le nombre de tests réussis.
+1. La qualité des modifications apportées.
+
+Attention ! *Seul le code **de la branche `master`** de votre dépôt sur GitHub compte !*
+
 ## Questions-Réponses
 
 ### «Puis-je utiliser l'en-tête <X.h> dans mon code ?»
@@ -117,11 +127,3 @@ Explorez particulièrement `<ctype.h>` et `<string.h>`.
 ### «J'ai un problème !»
 
 Outre les indications données dans le [premier exercice](https://github.com/Amu-DevCommeLesPros-2021/DevCommeLesPros-2021-Exo1#jai-un-probl%C3%A8me-) à ce sujet, le site https://cryptii.com peut vous aider à comprendre et tester différentes méthodes de (dé)chiffrage sur un texte en clair.
-
-## Évaluation
-
-1. Le suivi des instructions de travail.
-1. Le nombre de tests réussis.
-1. La qualité des modifications apportées.
-
-Attention ! *Seul le code **de la branche `master`** de votre dépôt sur GitHub compte !*
