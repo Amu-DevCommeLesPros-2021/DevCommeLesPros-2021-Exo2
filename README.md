@@ -4,7 +4,7 @@ Modèle de départ pour exercices d'introduction au `makefile`, à une structure
 
 <!-- TOC depthfrom:2 -->
 
-- [Instructions de départ](#instructions-de-d%C3%A9part)
+- [Préparation](#pr%C3%A9paration)
 - [Objectif](#objectif)
 - [Instructions de travail](#instructions-de-travail)
 - [Questions-Réponses](#questions-r%C3%A9ponses)
@@ -14,19 +14,19 @@ Modèle de départ pour exercices d'introduction au `makefile`, à une structure
 
 <!-- /TOC -->
 
-## Instructions de départ
+## Préparation
 
-Ces intructions présupposent que vous avez déjà suivi les instructions du [zérotième exercice](https://github.com/thierryseegers/DevCommeLesPros-2021-Exo0#instructions-de-d%C3%A9part) pour la création d'un compte GitHub et l'installation des programmes et extensions nécéssaires.
+Ces intructions présupposent que vous avez déjà suivi les instructions du [zérotième exercice](https://github.com/Amu-DevCommeLesPros-2021/DevCommeLesPros-2021-Exo0) pour la création d'un compte GitHub et l'installation des programmes et extensions nécéssaires.
 
-1. Créez votre dépôt sur github.com en utilisant ce dépôt-ci (https://github.com/thierryseegers/DevCommeLesPros-2021-Exo2) comme modèle.
-    - Suivez ces instructions : https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template.
+1. Créez votre dépôt sur github.com en utilisant [ce dépôt-ci](https://github.com/Amu-DevCommeLesPros-2021/DevCommeLesPros-2021-Exo2) comme modèle.
+    - Suivez [ces instructions](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
     - Choisissez l'option `Private` à l'étape 5.
 1. Ajoutez le professeur comme collaborateur à votre dépôt.
-    - Suivez ces instructions : https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository.
+    - Suivez [ces instructions](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository).
         - Nom d'utilisateur à ajouter: `thierryseegers`.
 1. Clonez votre dépôt vers votre espace de travail local.
-    - Suivez ces instructions : https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository.
-    - Attention à ne pas cloner https://github.com/thierryseegers/DevCommeLesPros-2021-Exo2 mais bien votre dépôt nouvellement créé.
+    - Suivez [ces instructions](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+    - Attention à ne pas cloner https://github.com/Amu-DevCommeLesPros-2021/DevCommeLesPros-2021-Exo2 mais bien votre dépôt nouvellement créé.
 1. Lancez Visual Studio Code.
     - À l'invite de commandes :
         - `$ cd [nom de votre dépôt]`
@@ -71,9 +71,9 @@ Il ne vous est pas permis :
     - `$ git push origin [nom de la branche]`
     - Exemple: `$ git push origin reparation-ROT13`.
 1. Lorsqu'une suite de tests est réparée, ouvrez un "Pull Request" sur GitHub pour fusionner la branche de travail à la branche `master`.
-    - Suivez ces instructions : https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request.
+    - Suivez [ces instructions](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request).
 1. Fusionnez la branche de travail sur GitHub.
-    - Suivez ces instructions : https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request#merging-a-pull-request-on-github.
+    - Suivez [ces instructions](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request#merging-a-pull-request-on-github).
     - Choisissez `Create a merge commit` à l'étape 3. 
 1. Revenez sur la branche `master` de votre dépôt local et synchronisez-la avec la branche `master` de votre dépôt sur GitHub.
     - `$ git checkout master`
@@ -116,7 +116,7 @@ Explorez particulièrement `<ctype.h>` et `<string.h>`.
 
 ### «J'ai un problème !»
 
-Outre les indications données dans le [premier exercice](https://github.com/thierryseegers/DevCommeLesPros-2021-Exo1#jai-un-probl%C3%A8me-) à ce sujet, le site https://cryptii.com peut vous aider à comprendre et tester différentes méthodes de (dé)chiffrage sur un texte en clair.
+Outre les indications données dans le [premier exercice](https://github.com/Amu-DevCommeLesPros-2021/DevCommeLesPros-2021-Exo1#jai-un-probl%C3%A8me-) à ce sujet, le site https://cryptii.com peut vous aider à comprendre et tester différentes méthodes de (dé)chiffrage sur un texte en clair.
 
 ## Évaluation
 
