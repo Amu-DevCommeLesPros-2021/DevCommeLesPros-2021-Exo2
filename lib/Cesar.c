@@ -2,12 +2,16 @@
 
 #include <stddef.h>
 
-char* chiffre_Cesar(char* clair, char const cle)
+char* chiffre_Cesar(
+    char* clair,        // Texte en clair qui sera modifié.
+    char const cle)
 {
     return NULL;
 }
 
-char* dechiffre_Cesar(char* chiffre, char const cle)
+char* dechiffre_Cesar(
+    char* chiffre,      // Texte chiffré qui sera modifié.
+    char const cle)
 {
     return NULL;
 }

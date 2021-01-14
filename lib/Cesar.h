@@ -5,5 +5,10 @@
 // La fonction modifie la chaîne de caractères donnée.
 // Seuls les caractères de 'a' à 'z' et de 'A' à 'Z' de la chaîne seront chiffrés ou déchiffrés.
 // Retourne un pointeur au début de la chaîne.
-char* chiffre_Cesar(char* clair, char const cle);
-char* dechiffre_Cesar(char* chiffre, char const cle);
+char* chiffre_Cesar(
+    char* clair,        // Texte en clair qui sera modifié.
+    char const cle);
+
+char* dechiffre_Cesar(
+    char* chiffre,      // Texte chiffré qui sera modifié.
+    char const cle);
