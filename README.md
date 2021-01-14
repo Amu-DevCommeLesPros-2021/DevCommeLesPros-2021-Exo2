@@ -7,6 +7,8 @@ Modèle de départ pour exercices d'introduction au `makefile`, à une structure
 - [Préparation](#pr%C3%A9paration)
 - [Objectif](#objectif)
 - [Instructions de travail](#instructions-de-travail)
+    - [Ce qui est permis](#ce-qui-est-permis)
+    - [Ce qui ne l'est pas](#ce-qui-ne-lest-pas)
 - [Évaluation](#%C3%A9valuation)
 - [Questions-Réponses](#questions-r%C3%A9ponses)
     - [«Puis-je utiliser l'en-tête <X.h> dans mon code ?»](#%C2%ABpuis-je-utiliser-len-t%C3%AAte-xh-dans-mon-code-%C2%BB)
@@ -98,13 +100,16 @@ Avec la commande `$ git log --all --decorate --oneline --graph`, l'historique de
 * 68cb404 Initial commit
 ```
 
-Il vous est permis : 
+### Ce qui est permis
+
 - De modifier le fichier `makefile`.
 - De modifier les fichiers `lib/ROT13.c`, `lib/Cesar.c` et `lib/Vigenere.c` afin d'implémenter les fonctions qu'ils contiennent.
 
-Il ne vous est pas permis :
+### Ce qui ne l'est pas
+
 - De modifier le fichier `test/main.c`.
 - De modifier les fichiers d'en-tête `lib/chiffrage.h`, `lib/ROT13.h`, `lib/Cesar.h`, `lib/Vigenere.h` et `lib/chiffrage.h`.
+- D'utiliser `goto` et d'avoir des «boucles infinies» du style `while(1)`. Pourquoi ? La réponse est [ici](https://github.com/Amu-DevCommeLesPros-2021/DevCommeLesPros-2021-Exo1#pourquoi-pas-de-goto-ou-de-boucles-infinies-).
 
 ## Évaluation
 
