@@ -1,6 +1,6 @@
 # DevCommeLesPros-2021-Exo2
 
-Modèle de départ pour exercices d'introduction au `makefile`, à une structure de projet et aux bibliothèques logicielles.
+Modèle de départ pour exercices d'introduction au `makefile` et aux bibliothèques logicielle ainsi qu'aux branches et aux «Pull Requests». 
 
 <!-- TOC depthfrom:2 -->
 
@@ -44,7 +44,7 @@ C'est normal car le fichier `makefile` manque des cibles pour produire le bon pr
 
 ## Objectif
 
-Dans ce dépôt se trouve des fichiers de code qui composent une bibliothèque statique `libchiffrage.a`.
+Dans ce dépôt se trouvent des fichiers de code qui composent une bibliothèque statique `libchiffrage.a`.
 Cette bibliothèque contient des fonctions servant à chiffer et à déchiffrer des chaînes de charatères suivant des méthodes diverses (bien qu'anciennes et peu sécuritaires !).
 Il se trouve aussi un programme de test (`test/main.c`) qui, comme dans l'exercice précédent, confirme que les fonctions sont bien implémentées.
 
